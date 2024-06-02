@@ -17,4 +17,10 @@ console.log(
   );
 
 
+const tokenMint = await createMint(connection, user, user.publicKey, null, 2);
 
+console.log(`tokenMint id : ${tokenMint}`);
+
+const link = getExplorerLink("address", tokenMint.toString(), "devnet");
+
+console.log(`✅ Finished! Created token mint: ${link}`);
